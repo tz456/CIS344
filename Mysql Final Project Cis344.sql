@@ -86,7 +86,7 @@ begin
     values(accountIDD,"withdraw",amount);
     
     update accounts
-    set balance = balance + amount where accountId = accountIDD and account_status like "active";
+    set balance = balance - amount where accountId = accountIDD and account_status like "active";
     
     set success = true;
     end if;
